@@ -2,6 +2,8 @@
 
 A graphical user interface for Frida script injection and app launching on Android devices, with special support for Nox emulator.
 
+![image](https://github.com/gru122121/FridaGUI/blob/main/image.png?raw=true)
+
 ## Features
 
 - Device scanning and selection
