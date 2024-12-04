@@ -104,7 +104,7 @@ FridaGUI/
 ---
 
 ## 📄 License
-This project is licensed under the ** agplv3 License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **agplv3 License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
