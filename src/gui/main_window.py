@@ -783,3 +783,29 @@ class FridaInjectorMainWindow(QMainWindow):
             error_msg = QLabel(f"Error loading favorites: {str(e)}")
             error_msg.setStyleSheet("color: #ff4444;")
             self.favorites_grid_layout.addWidget(error_msg, 0, 0, 1, 3)
+        
+    def cleanup(self):
+        """Clean up resources to prevent memory leaks"""
+        # Stop monitoring
+        if hasattr(self, 'process_monitor'):
+            self.process_monitor.stop_monitoring()
+        
+        # Clear history
+        if hasattr(self, 'history_manager'):
+            self.history_manager.save_history()
+        
+        # Clear device selector
+        if hasattr(self, 'device_selector'):
+            self.device_selector.cleanup()
+        
+        # Clear any running scripts
+        self.stop_injection()
+        
+        # Clear references
+        self.current_script = None
+        self.current_session = None
+        
+    def closeEvent(self, event):
+        """Handle window close event"""
+        self.cleanup()
+        event.accept()

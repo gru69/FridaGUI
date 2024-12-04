@@ -305,3 +305,9 @@ class DeviceSelector(QWidget):
             if str(pid) in self.process_combo.itemText(i):
                 self.process_combo.setCurrentIndex(i)
                 break
+
+    def cleanup(self):
+        """Clean up resources"""
+        self.process_combo.clear()
+        self.device_combo.clear()
+        self.current_device = None
