@@ -1,4 +1,7 @@
-frida-tools>=11.0.0
-frida>=16.0.19
-PyQt5==5.15.9
-requests>=2.26.0
+frida
+PyQt5
+qtawesome
+requests
+beautifulsoup4
+psutil
+aiohttp
